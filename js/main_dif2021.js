@@ -68,7 +68,7 @@ function initMap() {
 
                 //Propiedades círculos
                 let circle = e[i];
-                circle.style.strokeWidth = 0.3;
+                circle.style.strokeWidth = 0.45;
                 circle.style.stroke = '#000';
                 //Propiedades
                 let html = '<p class="chart__tooltip--title">' + d.properties.NAMEUNIT + '</p>' + '<p class="chart__tooltip--text">Variación población: ' + d.properties.dif.toFixed(2) + '</p>' + '<p class="chart__tooltip--text">Población en 2020: ' + d.properties.dato_2020 + '</p>' + '<p class="chart__tooltip--text">Población en 2021: ' + d.properties.dato_2021 + '</p>';
