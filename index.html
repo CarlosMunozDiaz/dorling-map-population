@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="mrf-extractable" content="false">
+    <title>DIFERENCIA DE POBLACIÓN MUNICIPAL ENTRE 2021 Y 2020</title>
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet">
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js'></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css"/>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js'></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,800,900&amp;display=swap" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
+</head>
+<body>
+    <section class="container">
+        <h2 class="title">Ganancia o pérdida de población entre 2021 y 2020 a nivel municipal</h2>
+        <div class="legend">
+            <span class="legend__gradient"></span>
+            <div class="text">
+                <span>-38</span>
+                <span>0</span>
+                <span>+60</span>
+            </div>
+        </div>
+        <div id="map"></div>
+        <div class="source">
+            <span>Fuente: INE</span>
+        </div>
+        <div class="chart__tooltip" id="tooltip"></div>
+    </section>
+    <!-- Script base de D3 -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <!-- Script para trabajar con archivos topoJson, geoJson y shapefiles -->
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+
+    <!-- Script que ofrece numerosas posibilidades de proyecciones geográficas (satellite o robinson, p.e.) -->
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+
+    <!-- Script que modifica las proyecciones y acerca territorios alejados del territorio 'principal' (Península y Canarias, p.e.) -->
+    <script src="https://unpkg.com/d3-composite-projections@1.2.0"></script>
+
+    <!-- Scripts propios con diferentes boundaries -->
+    <script src="./js/main_dif2021.js"></script>
+</body>
+</html>
