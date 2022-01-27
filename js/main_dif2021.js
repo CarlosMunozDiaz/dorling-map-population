@@ -6,7 +6,7 @@ let inside = false;
 initMap();
 
 function initMap() {
-    d3.json('../data/municipios_geo_dif21.json', function(error,data) {
+    d3.json('https://raw.githubusercontent.com/CarlosMunozDiaz/dorling-map-population/main/data/municipios_geo_dif21.json', function(error,data) {
         if (error) throw error;
         let us = topojson.feature(data, data.objects.muni);
         
