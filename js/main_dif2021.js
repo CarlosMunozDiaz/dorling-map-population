@@ -68,7 +68,7 @@ function initMap() {
 
                 //Propiedades círculos
                 let circle = e[i];
-                circle.style.strokeWidth = 0.45;
+                circle.style.strokeWidth = 1;
                 circle.style.stroke = '#000';
                 //Propiedades
                 let html = '<p class="chart__tooltip--title">' + d.properties.NAMEUNIT + '</p>' + '<p class="chart__tooltip--text">Variación población: ' + d.properties.dif.toFixed(2) + '</p>' + '<p class="chart__tooltip--text">Población en 2020: ' + d.properties.dato_2020 + '</p>' + '<p class="chart__tooltip--text">Población en 2021: ' + d.properties.dato_2021 + '</p>';
@@ -138,10 +138,8 @@ function positionTooltip(event, tooltip) {
     let distanciaAncho = isNaN(ancho) ? 100 : ancho;
 
     //Posición
-    let left = window.innerWidth / 2 > x ? 'left' : 'right';
-    let mobile = window.innerWidth < 525 ? -50 : 20;
-    let horizontalPos = left == 'left' ? 20 : - distanciaAncho + mobile;
+    let horizontalPos = -172.5;
 
-    tooltip.style('top', y + 15 + 'px');
+    tooltip.style('top', y + -50 + 'px');
     tooltip.style('left', (x + horizontalPos) + 'px');
 }
